@@ -1,0 +1,188 @@
+{
+  "name": "DISK CHECK (FULL) \u2014 glaciar",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "Manual",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        200,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "command": "df -P -B1 --output=source,fstype,size,used,avail,pcent,target"
+      },
+      "id": "Exec",
+      "name": "Exec: df",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 2,
+      "position": [
+        460,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "\nconst raw = $json.stdout || '';\nif (!raw.trim()) return [{ json: { report: 'NO DATA', overallLow: false } }];\nconst lines = raw.trim().split('\\n');\nconst data = lines.slice(1);\nfunction fmt(n){ if(!Number.isFinite(n))return'N/A'; const u=['B','KiB','MiB','GiB','TiB']; let i=0,v=n; while(v>=1024&&i<u.length-1){v/=1024;i++;} return (v>=10?v.toFixed(1):v.toFixed(2))+' '+u[i]; }\nconst ignore = new Set(['tmpfs','devtmpfs','squashfs','overlay']);\nconst vols=[];\nfor (const line of data){ if(!line.trim()) continue; const p=line.trim().split(/\\s+/); if(p.length<7) continue;\n  const [src,fs,sizeB,usedB,availB,usedPctStr,...t]=p; const mount=t.join(' ');\n  if (ignore.has(fs)) continue;\n  const usedPct=parseInt(usedPctStr.replace('%',''),10); const freePct=100-usedPct;\n  vols.push({mount,fs,size:+sizeB,used:+usedB,avail:+availB,freePct});\n}\nconst rows = vols.map(v=>`| ${v.mount} | ${v.fs} | ${fmt(v.size)} | ${fmt(v.used)} | ${fmt(v.avail)} | ${v.freePct.toFixed(0)}% |`);\nconst header = `| Mount | FS | Size | Used | Free | Free % |\\n|---|---|---:|---:|---:|---:|`;\nconst ts = new Date().toISOString();\nconst report = [`**Weekly Disk Report \u2014 glaciar**`,`Timestamp: ${ts}`,'',header,...rows].join('\\n');\nconst overallLow = vols.some(v=>v.freePct<30);\nreturn [{ json: { report, overallLow } }];\n"
+      },
+      "id": "Func",
+      "name": "Function: Parse & Format",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 2,
+      "position": [
+        720,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "operation": "smaller",
+              "value1": "={{$json[\"overallLow\"] ? 1 : 0}}",
+              "value2": 1
+            }
+          ]
+        }
+      },
+      "id": "IF",
+      "name": "IF: Any <30%?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        960,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://ntfy.sh/glaciar-alerts",
+        "jsonParameters": false,
+        "options": {
+          "headers": {
+            "parameters": [
+              {
+                "name": "X-Title",
+                "value": "\u26a0\ufe0f Low Disk Space Alert (glaciar)"
+              },
+              {
+                "name": "X-Priority",
+                "value": "5"
+              },
+              {
+                "name": "X-Tag",
+                "value": "warning,rotating_light"
+              }
+            ]
+          },
+          "bodyContentType": "raw"
+        },
+        "sendBody": true,
+        "rawBody": "={{$json.report}}"
+      },
+      "id": "Alert",
+      "name": "HTTP: Send Alert (ntfy)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        1200,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://ntfy.sh/glaciar-alerts",
+        "jsonParameters": false,
+        "options": {
+          "headers": {
+            "parameters": [
+              {
+                "name": "X-Title",
+                "value": "Disk Report (glaciar)"
+              },
+              {
+                "name": "X-Tag",
+                "value": "floppy_disk"
+              }
+            ]
+          },
+          "bodyContentType": "raw"
+        },
+        "sendBody": true,
+        "rawBody": "={{$json.report}}"
+      },
+      "id": "Report",
+      "name": "HTTP: Send Report (ntfy)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        960,
+        400
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Exec: df",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Exec: df": {
+      "main": [
+        [
+          {
+            "node": "Function: Parse & Format",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function: Parse & Format": {
+      "main": [
+        [
+          {
+            "node": "IF: Any <30%?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP: Send Report (ntfy)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF: Any <30%?": {
+      "main": [
+        [
+          {
+            "node": "HTTP: Send Alert (ntfy)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    }
+  },
+  "settings": {
+    "timezone": "America/New_York"
+  }
+}
