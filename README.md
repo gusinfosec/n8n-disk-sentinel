@@ -1,6 +1,15 @@
-# n8n Disk Check
+<p align="center">
+  <img src="assets/n8n-disk-sentinel-logo.png" width="420" alt="n8n-Disk Sentinel logo" />
+</p>
 
-An **n8n workflow** that probes disk usage with `df`, builds a Markdown table, and posts both a periodic report and a high‑priority alert to **ntfy** if any filesystem falls below a free‑space threshold.
+<h1 align="center">n8n‑Disk Sentinel</h1>
+<p align="center"><i>Protect space, prevent downtime with <a href="https://ntfy.sh" target="_blank">ntfy</a>.</i></p>
+
+<p align="center">
+  <a href="https://ko-fi.com/s/0ce6761cbf" target="_blank">
+    <img src="https://img.shields.io/badge/Buy%20on-Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Buy on Ko-fi" />
+  </a>
+</p>
 
 > Nodes (high level): Manual Trigger → Exec `df` → Function (parse/format) → IF threshold → HTTP `ntfy` Alert + HTTP `ntfy` Report.
 
