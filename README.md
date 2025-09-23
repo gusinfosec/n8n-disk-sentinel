@@ -6,7 +6,7 @@
 <p align="center"><i>Protect space, prevent downtime with <a href="https://ntfy.sh" target="_blank">ntfy</a>.</i></p>
 
 <p align="center">
-  <a href="https://ko-fi.com/s/0ce6761cbf" target="_blank">
+  <a href="https://ko-fi.com/s/60ece3037f" target="_blank">
     <img src="https://img.shields.io/badge/Buy%20on-Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Buy on Ko-fi" />
   </a>
 </p>
