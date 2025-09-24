@@ -2,7 +2,8 @@
   <img src="assets/n8n-disk-logo.png" width="420" alt="n8n-Disk Sentinel logo" />
 </p>
 
-<h1 align="center">n8n‑Disk Sentinel</h1>
+[![GitHub stars](https://img.shields.io/github/stars/gusinfosec/n8n-disk-sentinel?style=social)](https://github.com/gusinfosec/n8n-disk-sentinel/stargazers)
+
 <p align="center"><i>Protect space, prevent downtime with <a href="https://ntfy.sh" target="_blank">ntfy</a>.</i></p>
 
 <p align="center">
