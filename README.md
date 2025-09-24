@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://ko-fi.com/YOUR_KOFI_USERNAME" target="_blank">
+  <a href="https://ko-fi.com/s/60ece3037f" target="_blank">
     <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi"/>
   </a>
   &nbsp;&nbsp;
