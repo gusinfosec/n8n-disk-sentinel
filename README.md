@@ -1,16 +1,25 @@
 <p align="center">
-  <img src="assets/n8n-disk-logo.png" width="420" alt="n8n-Disk Sentinel logo" />
+  <img src="assets/marketing/n8n-disk-sentinel-logo.png" width="200" alt="n8n-Disk Sentinel logo"/>
 </p>
 
-[![GitHub stars](https://img.shields.io/github/stars/gusinfosec/n8n-disk-sentinel?style=social)](https://github.com/gusinfosec/n8n-disk-sentinel/stargazers)
-
-<p align="center"><i>Protect space, prevent downtime with <a href="https://ntfy.sh" target="_blank">ntfy</a>.</i></p>
+<h1 align="center">n8n-Disk Sentinel</h1>
 
 <p align="center">
-  <a href="https://ko-fi.com/s/60ece3037f" target="_blank">
-    <img src="https://img.shields.io/badge/Buy%20on-Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Buy on Ko-fi" />
+  <i>Proactive disk monitoring via n8n — df alerts, usage thresholds, and real-time notifications via ntfy</i>
+</p>
+
+<p align="center">
+  <a href="https://ko-fi.com/YOUR_LINK_HERE">
+    <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi" />
   </a>
 </p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License: MIT" />
+  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status: Active" />
+  <img src="https://img.shields.io/github/stars/gusinfosec/n8n-disk-sentinel?style=social" alt="GitHub Stars" />
+</p>
+
 
 > Nodes (high level): Manual Trigger → Exec `df` → Function (parse/format) → IF threshold → HTTP `ntfy` Alert + HTTP `ntfy` Report.
 
