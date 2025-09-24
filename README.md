@@ -1,4 +1,14 @@
 <p align="center">
+  <img src="docs/assets/logo-n8n-disk-sentinel.png" width="300" alt="n8n-Disk Sentinel Logo" />
+</p>
+
+<h1 align="center">n8n‑Disk Sentinel</h1>
+
+<p align="center">
+  A lightweight n8n automation to monitor Linux disk space and send ntfy alerts when a critical threshold is exceeded.
+</p>
+
+<p align="center">
   <a href="https://ko-fi.com/YOUR_KOFI_USERNAME" target="_blank">
     <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi" />
   </a>
