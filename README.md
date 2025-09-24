@@ -20,6 +20,7 @@
   <img src="https://img.shields.io/github/stars/gusinfosec/n8n-disk-sentinel?style=social" alt="GitHub Stars" />
 </p>
 
+---
 
 > Nodes (high level): Manual Trigger → Exec `df` → Function (parse/format) → IF threshold → HTTP `ntfy` Alert + HTTP `ntfy` Report.
 
