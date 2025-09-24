@@ -10,11 +10,11 @@
 
 <p align="center">
   <a href="https://ko-fi.com/YOUR_KOFI_USERNAME" target="_blank">
-    <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi" />
+    <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi"/>
   </a>
   &nbsp;&nbsp;
   <a href="https://ko-fi.com/YOUR_KOFI_USERNAME" target="_blank">
-    <img src="https://ko-fi.com/img/cup-border.png" alt="Support this project on Ko-fi" height="40" />
+    <img src="https://ko-fi.com/img/cup-border.png" alt="Support this project on Ko-fi" height="40"/>
   </a>
 </p>
 
