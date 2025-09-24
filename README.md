@@ -14,7 +14,7 @@
   </a>
   &nbsp;&nbsp;
   <a href="https://ko-fi.com/s/60ece3037f" target="_blank">
-    <img src="https://storage.ko-fi.com/cdn/kofi_button_blue.png" alt="Buy Me a Coffee" height="36" />
+    <img src="https://storage.ko-fi.com/cdn/kofi_button_blue.png" alt="Buy Me a Coffee" height="36"/>
   </a>
 </p>
 
