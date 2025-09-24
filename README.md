@@ -1,24 +1,24 @@
 <p align="center">
-  <img src="assets/n8n-disk-logo.png" width="300" alt="n8n-Disk Sentinel logo"/>
+  <img src="docs/assets/disk-sentinel-logo.png" alt="Disk Sentinel Logo" height="100" />
 </p>
 
 <h1 align="center">n8n-Disk Sentinel</h1>
 
 <p align="center">
-  <i>Proactive disk monitoring via n8n — df alerts, usage thresholds, and real-time notifications via ntfy</i>
+  A lightweight n8n automation to monitor Linux disk space and send ntfy alerts when a critical threshold is exceeded.
 </p>
 
 <p align="center">
-  <a href="https://ko-fi.com/s/60ece3037f">
+  <a href="https://ko-fi.com/YOUR_KOFI_LINK" target="_blank">
     <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://ko-fi.com/YOUR_KOFI_LINK" target="_blank">
+    <img src="https://ko-fi.com/img/cuplogo.svg" height="20" alt="Buy Me a Coffee">
+    Support this project on Ko-fi
   </a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/license-MIT-green" alt="License: MIT" />
-  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status: Active" />
-  <img src="https://img.shields.io/github/stars/gusinfosec/n8n-disk-sentinel?style=social" alt="GitHub Stars" />
-</p>
 
 ---
 
