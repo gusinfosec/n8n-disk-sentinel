@@ -9,15 +9,12 @@
 </p>
 
 <p align="center">
-  <a href="https://ko-fi.com/s/60ece3037f" target="_blank">
+  <a href="https://ko-fi.com/YOUR-KOFI-HANDLE" target="_blank">
     <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi" />
   </a>
-  &nbsp;&nbsp;
-  <a href="https://ko-fi.com/s/60ece3037f" target="_blank">
-    <img src="https://storage.ko-fi.com/cdn/kofi_button_blue.png" alt="Buy Me a Coffee" height="36"/>
-  </a>
+  &nbsp; &nbsp;
+  <a href="https://ko-fi.com/YOUR-KOFI-HANDLE" target="_blank">Buy Me a Coffee</a>
 </p>
-
 
 ---
 
