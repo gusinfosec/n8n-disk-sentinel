@@ -1,19 +1,27 @@
 <p align="center">
-  <img src="assets/n8n-disk-logo.png" width="300" alt="n8n-Disk Sentinel Logo" />
+  <img src="docs/assets/n8n-disk-sentinel-logo.png" width="300" alt="n8n-Disk Sentinel Logo">
 </p>
 
-<h1 align="center">n8n‑Disk Sentinel</h1>
+<h1 align="center">n8n-Disk Sentinel</h1>
 
 <p align="center">
   A lightweight n8n automation to monitor Linux disk space and send ntfy alerts when a critical threshold is exceeded.
 </p>
 
 <p align="center">
-  <a href="https://ko-fi.com/YOUR-KOFI-HANDLE" target="_blank">
-    <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi" />
+  <a href="https://ko-fi.com/gusinfosec">
+    <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi">
+  </a>&nbsp;
+  <a href="https://ko-fi.com/gusinfosec">
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-orange?logo=ko-fi&logoColor=white&style=flat-square" alt="Buy Me a Coffee">
   </a>
-  &nbsp; &nbsp;
-  <a href="https://ko-fi.com/YOUR-KOFI-HANDLE" target="_blank">Buy Me a Coffee</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-brightgreen?style=flat-square">
+  <img src="https://img.shields.io/badge/status-active-brightgreen?style=flat-square">
+  <img src="https://img.shields.io/github/stars/gusinfosec/n8n-disk-sentinel?style=flat-square" alt="GitHub Stars">
+  <img src="https://img.shields.io/badge/Built%20for-Linux-0078D6?style=flat-square&logo=linux" alt="Built for Linux">
 </p>
 
 ---
