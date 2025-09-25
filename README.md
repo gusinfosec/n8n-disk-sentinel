@@ -17,7 +17,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-brightgreen?style=flat-square">
   <img src="https://img.shields.io/badge/status-active-brightgreen?style=flat-square">
-  <img src="https://img.shields.io/github/stars/gusinfosec/n8n-disk-sentinel?style=flat-square" alt="GitHub Stars">
+  <img src="https://img.shields.io/github/stars/gusinfosec/n8n-disk-sentinel?style=social" alt="GitHub Stars">
   <img src="https://img.shields.io/badge/Built%20for-Linux-0078D6?style=flat-square&logo=linux" alt="Built for Linux">
 </p>
 
